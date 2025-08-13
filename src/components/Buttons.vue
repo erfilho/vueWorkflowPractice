@@ -1,7 +1,7 @@
 <template>
   <button
-    @click="response"
-    class="rounded-md 0 flex flex-col items-center p-1 text-white font-semibold cursor-pointer"
+    @click="click1"
+    class="rounded-md 0 flex flex-col items-center p-1 font-semibold cursor-pointer"
     :class="color"
   >
     {{ title }}
@@ -12,6 +12,8 @@
 import { ref } from "vue";
 
 const count = ref(0);
+
+defineEmits(["click1"]);
 
 const props = defineProps({
   title: {
